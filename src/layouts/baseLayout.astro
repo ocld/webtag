@@ -1,0 +1,69 @@
+---
+import "@/design/tokens.css";
+import "@/design/base.css";
+import "@/design/animations.css";
+import "@/design/components.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "webtag by ocld",
+  description = "inspect, edit, spoof, or strip metadata on audio, images, documents, app bundles, drives, and archives in your browser.",
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const faviconHref = `${base}/favicon.svg`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? "https://ocld.github.io/webtag/").toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#edf1ff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#11162b" media="(prefers-color-scheme: dark)" />
+    <meta name="application-name" content="webtag" />
+    <meta name="author" content="ocld" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="webtag" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href={faviconHref} type="image/svg+xml" />
+    <link rel="shortcut icon" href={faviconHref} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={faviconHref} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wdth,wght,ROND@6..144,25..151,1..1000,0..100&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,0"
+    />
+    <title>{title}</title>
+    <script is:inline>
+      // restore saved theme before first paint to prevent a light/dark flash
+      try {
+        if (localStorage.getItem("webtag-theme") === "night") {
+          document.documentElement.dataset.theme = "night";
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="sr-skip-link">skip to main content</a>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-hex) transparent;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+body select {
+  cursor: var(--cursor-normal) !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: var(--canvas);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+body {
+  background-image:
+    radial-gradient(65% 45% at 10% 4%, rgba(255, 130, 152, 0.24) 0%, transparent 60%),
+    radial-gradient(65% 45% at 26% 0%, rgba(255, 198, 92, 0.22) 0%, transparent 60%),
+    radial-gradient(65% 45% at 44% 2%, rgba(235, 224, 108, 0.18) 0%, transparent 60%),
+    radial-gradient(70% 50% at 60% 0%, rgba(110, 224, 166, 0.2) 0%, transparent 60%),
+    radial-gradient(70% 50% at 76% 4%, rgba(102, 206, 255, 0.22) 0%, transparent 60%),
+    radial-gradient(75% 50% at 50% 8%, rgba(114, 140, 255, 0.22) 0%, transparent 65%),
+    radial-gradient(70% 50% at 92% 4%, rgba(186, 128, 255, 0.2) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+:root[data-theme="night"] body {
+  background-image:
+    radial-gradient(65% 45% at 10% 4%, rgba(255, 107, 138, 0.15) 0%, transparent 60%),
+    radial-gradient(65% 45% at 28% 0%, rgba(246, 200, 95, 0.12) 0%, transparent 60%),
+    radial-gradient(70% 50% at 56% 0%, rgba(74, 222, 128, 0.11) 0%, transparent 60%),
+    radial-gradient(70% 50% at 76% 4%, rgba(86, 204, 242, 0.14) 0%, transparent 60%),
+    radial-gradient(75% 50% at 50% 8%, rgba(117, 142, 255, 0.18) 0%, transparent 65%),
+    radial-gradient(70% 50% at 92% 4%, rgba(196, 155, 255, 0.15) 0%, transparent 60%);
+}
+
+body a,
+body button,
+body [type="button"],
+body input[type="reset"],
+body input[type="submit"],
+body [role="button"],
+body [role="tab"],
+body [role="option"],
+body [role="radio"],
+body summary,
+body input[type="checkbox"],
+body input[type="radio"],
+body label:has(input[type="checkbox"]),
+body label:has(input[type="radio"]),
+body .wt-clickable {
+  cursor: var(--cursor-pointer) !important;
+}
+
+body button:disabled,
+body [aria-disabled="true"] {
+  cursor: not-allowed !important;
+}
+
+body input[type="text"],
+body input[type="number"],
+body input[type="search"],
+body input:not([type]),
+body textarea {
+  cursor: text !important;
+}
+
+.wt-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  user-select: none;
+  flex-shrink: 0;
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 24;
+}
+
+.sr-skip-link {
+  position: fixed;
+  top: -100px;
+  left: 12px;
+  z-index: 9999;
+  padding: 9px 16px;
+  background: var(--primary-hex);
+  color: var(--primary-ink);
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-variation-settings: "ROND" 100;
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: top var(--duration-fast) var(--ease-out);
+}
+
+.sr-skip-link:focus {
+  top: 12px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+a {
+  color: var(--primary-hex);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  animation: rainbow 8s infinite alternate;
+  animation-delay: 0.4s;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+}
+
+pre,
+code,
+kbd {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background: rgba(87, 115, 255, 0.24);
+  color: var(--text-bright);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary-hex);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(87, 115, 255, 0.34);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(87, 115, 255, 0.6);
+}

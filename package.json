@@ -1,0 +1,31 @@
+{
+  "name": "webtag",
+  "version": "1.0.0",
+  "private": true,
+  "description": "universal metadata viewer, editor, spoofer, and scrubber in your browser",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "build:pages": "ASTRO_BASE=/webtag astro build",
+    "preview": "astro preview",
+    "check": "astro check && tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.1",
+    "@fontsource-variable/tiktok-sans": "^5.2.5",
+    "@tabler/icons-react": "^3.31.0",
+    "astro": "^5.5.0",
+    "jszip": "^3.10.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "taglib-wasm": "^1.0.21"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.8.2"
+  }
+}

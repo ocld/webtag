@@ -1,0 +1,181 @@
+:root {
+  --cursor-normal: url("https://static.wikitide.net/utgwiki/4/4c/Cursor.png") 2 1, auto;
+  --cursor-pointer: url("https://static.wikitide.net/utgwiki/a/ab/Pointer.png") 3 1, pointer;
+
+  --primary: 87 115 255;
+  --primary-hex: #5773ff;
+  --primary-bright: #415de8;
+  --primary-press: #3c56e0;
+  --primary-ink: #ffffff;
+  --primary-tint: rgba(87, 115, 255, 0.12);
+  --primary-tint-strong: rgba(87, 115, 255, 0.22);
+  --primary-border: rgba(87, 115, 255, 0.38);
+
+  --canvas: #edf1ff;
+  --panel: rgba(255, 255, 255, 0.78);
+  --panel-solid: #ffffff;
+  --bg-a: #ffffff;
+  --bg-b: #f3f6ff;
+  --bg-c: #e7ecff;
+  --bg-d: #dae2ff;
+  --bg-e: #ccd7ff;
+
+  --ink-outline: #282d52;
+  --text-focus: #23284a;
+  --text-bright: #191d38;
+  --text-main: #2e3459;
+  --text-muted: #5b638c;
+  --text-dim: #7981a8;
+  --text-dark: #9ba3c4;
+
+  --accent-blue: #5773ff;
+  --accent-blue-bg: rgba(87, 115, 255, 0.12);
+  --accent-blue-bd: rgba(87, 115, 255, 0.34);
+
+  --accent-green: #189e52;
+  --accent-green-bg: rgba(24, 158, 82, 0.12);
+  --accent-green-bd: rgba(24, 158, 82, 0.34);
+
+  --accent-amber: #d47a00;
+  --accent-amber-bg: rgba(245, 166, 35, 0.14);
+  --accent-amber-bd: rgba(212, 122, 0, 0.34);
+
+  --accent-violet: #7c4dff;
+  --accent-violet-bg: rgba(124, 77, 255, 0.12);
+  --accent-violet-bd: rgba(124, 77, 255, 0.34);
+
+  --accent-cyan: #0088cc;
+  --accent-cyan-bg: rgba(0, 136, 204, 0.12);
+  --accent-cyan-bd: rgba(0, 136, 204, 0.34);
+
+  --danger: #e8385c;
+  --danger-soft: #d4264a;
+  --danger-bg: rgba(232, 56, 92, 0.11);
+  --danger-bd: rgba(232, 56, 92, 0.34);
+  --warn: #c77200;
+  --success: #189e52;
+  --violet: #7c4dff;
+
+  --line: rgba(40, 45, 82, 0.1);
+  --line-strong: rgba(40, 45, 82, 0.18);
+  --border: rgba(40, 45, 82, 0.12);
+  --border-soft: rgba(40, 45, 82, 0.08);
+  --border-strong: rgba(40, 45, 82, 0.2);
+  --sticker-shadow: rgba(40, 45, 82, 0.16);
+  --stripe-color: rgba(255, 255, 255, 0.24);
+
+  --shadow-sm: 0 2px 8px rgba(40, 45, 82, 0.06);
+  --shadow-md: 0 12px 32px rgba(40, 45, 82, 0.09);
+  --shadow-lg: 0 20px 56px rgba(40, 45, 82, 0.18);
+
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-blur: blur(12px) saturate(1.2);
+
+  --radius-xs: 6px;
+  --radius-sm: 9px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+
+  --duration-fast: 140ms;
+  --duration-normal: 220ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --font-display: "Google Sans Flex", system-ui, -apple-system, sans-serif;
+  --font-sans: "Google Sans Flex", system-ui, -apple-system, sans-serif;
+  --font-mono: "Cascadia Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --cli-bg: var(--bg-b);
+  --cli-bg-deep: var(--bg-a);
+  --cli-bg-hover: var(--bg-c);
+  --cli-bg-active: var(--bg-d);
+  --cli-fg: var(--text-main);
+  --cli-fg-bright: var(--text-focus);
+  --cli-fg-muted: var(--text-muted);
+  --cli-fg-dim: var(--text-dim);
+  --cli-border: var(--border-strong);
+  --cli-border-subtle: var(--border);
+  --cli-select: var(--primary-hex);
+  --cli-select-bg: var(--primary-tint);
+  --cli-cta-bg: var(--primary-hex);
+  --cli-cta-bg-hover: var(--primary-press);
+  --cli-cta-fg: var(--primary-ink);
+
+  font-size: 16px;
+  color-scheme: light;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme="night"] {
+  --primary-hex: #758eff;
+  --primary-bright: #9eb1ff;
+  --primary-press: #5e78f2;
+  --primary-ink: #0f142e;
+  --primary-tint: rgba(117, 142, 255, 0.16);
+  --primary-tint-strong: rgba(117, 142, 255, 0.26);
+  --primary-border: rgba(145, 166, 255, 0.42);
+
+  --canvas: #11162b;
+  --panel: rgba(24, 31, 61, 0.72);
+  --panel-solid: #181f3d;
+  --bg-a: #181f3d;
+  --bg-b: #1e264a;
+  --bg-c: #27315e;
+  --bg-d: #313e75;
+  --bg-e: #3d4d8f;
+
+  --ink-outline: #0c1024;
+  --text-focus: #f0f3ff;
+  --text-bright: #ffffff;
+  --text-main: #d8dfff;
+  --text-muted: #9eaad6;
+  --text-dim: #7b87b5;
+  --text-dark: #5b6794;
+
+  --accent-blue: #8ca3ff;
+  --accent-blue-bg: rgba(117, 142, 255, 0.16);
+  --accent-blue-bd: rgba(140, 163, 255, 0.36);
+
+  --accent-green: #4ade80;
+  --accent-green-bg: rgba(74, 222, 128, 0.14);
+  --accent-green-bd: rgba(74, 222, 128, 0.34);
+
+  --accent-amber: #f6c85f;
+  --accent-amber-bg: rgba(246, 200, 95, 0.14);
+  --accent-amber-bd: rgba(246, 200, 95, 0.36);
+
+  --accent-violet: #c49bff;
+  --accent-violet-bg: rgba(196, 155, 255, 0.16);
+  --accent-violet-bd: rgba(196, 155, 255, 0.36);
+
+  --accent-cyan: #56ccf2;
+  --accent-cyan-bg: rgba(86, 204, 242, 0.14);
+  --accent-cyan-bd: rgba(86, 204, 242, 0.34);
+
+  --danger: #ff6b88;
+  --danger-soft: #ff8aa1;
+  --danger-bg: rgba(255, 107, 136, 0.14);
+  --danger-bd: rgba(255, 107, 136, 0.36);
+  --warn: #f6c85f;
+  --success: #4ade80;
+  --violet: #c49bff;
+
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-soft: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --sticker-shadow: rgba(6, 9, 24, 0.55);
+  --stripe-color: rgba(255, 255, 255, 0.16);
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.38);
+  --shadow-lg: 0 22px 60px rgba(0, 0, 0, 0.55);
+
+  --glass-bg: rgba(20, 26, 52, 0.72);
+  color-scheme: dark;
+}
